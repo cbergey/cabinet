@@ -69,8 +69,6 @@ cite{font-style: italic;}
 }
 #col-4{
   order: 4;
-}
-#col-4 .column{
   border-right: none;
 }
 img{
@@ -80,6 +78,9 @@ img{
   margin: 2em 0 1em 0;
   /*mix-blend-mode: luminosity;*/
 }
+
+/* Begin desktop layout changes (when device width >= 40em) */
+
 @media (min-width: 40rem) {
   .columns-container{
     display: flex;
@@ -88,23 +89,26 @@ img{
     overflow: hidden;
   }
   .turnbuckle{
-    height: 100%;
     width: 25%;
-    display: flex;
-    padding: 1em 0;
-    box-sizing: border-box;
-    transition: background-color 2s;
-  }
-  .turnbuckle:hover{
-    background-color: #dce6d7;
-    transition: background-color 2s;
+    border-right: 1px solid #444;
+    height: calc(100vh - 2em);
+    position: relative;
+    top: 1em;
   }
   .column{
+    padding: 1em 1em;
     width: 100%;
-    border-right: 1px solid black;
     margin: 0;
     overflow-y: auto;
     box-sizing: border-box;
+    height: 100vh;
+    position: relative;
+    top: -1em;
+    transition: background-color 2s;
+  }
+  .column:hover{
+    background-color: #dce6d7;
+    transition: background-color 2s;
   }
   .sinking-margin{
     margin-top: 8em;
