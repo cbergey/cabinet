@@ -34,42 +34,55 @@
                                           and contains four columns. -->
 
       <!-- This first column has two bunches of content pushed apart -->
-      <div class="column justify-between" id="col-3">
-        <!-- Name -->
-        <div> <!-- this div groups the lines of your title together in the eyes of the parent flex box -->
-          <h1>Claire Augusta Bergey</h1>
-          <p>Doctoral Student in Cognitive Psychology</p>
-          <p>University of Chicago</p>
-        </div>
+      <div class="turnbuckle" id="col-3">
+        <div class="column justify-between">
+          <!-- Name -->
+          <div> <!-- this div groups the lines of your title together in the eyes of the parent flex box -->
+            <h1>Claire Augusta Bergey</h1>
+            <p>Doctoral Student in Cognitive Psychology</p>
+            <p>University of Chicago</p>
+          </div>
 
-        <!-- Image -->
-        <div>
-          <img src="claire_spoon.jpg" alt="claire in a parking lot holding a large serving spoon" width="200">
+          <!-- Image -->
+          <div>
+            <img src="claire_spoon.jpg" alt="claire in a parking lot holding a large serving spoon" width="200">
+          </div>
         </div>
       </div>
 
       <!-- Links -->
-      <div class="column justify-end" id="col-2">
-        <ul class="list_flush">
-          <li><a href="mailto:cbergey@uchicago.edu">cbergey@uchicago.edu</a></li>
-          <li><a href="https://github.com/cbergey">Github</a></li>
-        </ul>
-      </div>
-
-      <!-- Biography -->
-      <div class="column" id="col-4">
-        <h1 class="sinking-margin">Biography</h1> <!-- this text sinks down in its column when the device is wide enough -->
-        <p>I research language and category learning.</p>
+      <div class="turnbuckle" id="col-2">
+        <div class="column justify-end">
+          <ul class="list_flush">
+            <li><a href="mailto:cbergey@uchicago.edu">cbergey@uchicago.edu</a></li>
+            <li><a href="https://github.com/cbergey">Github</a></li>
+          </ul>
+        </div>
       </div>
 
       <!-- Research -->
-      <div class="column justify-center" id="col-1">
-        <h1>Conference Proceedings</h1>
-        <ul class="list_indent">
-	  <li>Bergey, C. & Yurovsky, D. (2020, September). <cite>Listeners use descriptive contrast to disambiguate novel referents and make inferences about novel categories.</cite> Proceedings of the first annual meeting of Experiments in Linguistic Meaning. <a href = "https://github.com/cbergey/cabinet/raw/main/papers/contrast_ELM_final.pdf">PDF.</a></li>
-          <li>Bergey, C.*, Morris, B.* & Yurovsky, D. (2020, July). <cite>Children hear more about what is atypical than what is typical.</cite> Proceedings of the 42nd annual meeting of the Cognitive Science Society. <a href = "https://doi.org/10.31234/osf.io/5wvu8">PsyArXiv.</a></li>
-        </ul>
-        <p>* denotes joint first authorship</p>
+      <div class="turnbuckle" id="col-1">
+        <div class="column justify-center">
+          <h1>Conference Proceedings</h1>
+          <ul class="list_indent">
+        	  <li>Bergey, C. & Yurovsky, D. (2020, September). <cite>Listeners use descriptive contrast to disambiguate novel referents and make inferences about novel categories.</cite> Proceedings of the first annual meeting of Experiments in Linguistic Meaning. <a href = "https://github.com/cbergey/cabinet/raw/main/papers/contrast_ELM_final.pdf">PDF.</a></li>
+            <li>Bergey, C.*, Morris, B.* & Yurovsky, D. (2020, July). <cite>Children hear more about what is atypical than what is typical.</cite> Proceedings of the 42nd annual meeting of the Cognitive Science Society. <a href = "https://doi.org/10.31234/osf.io/5wvu8">PsyArXiv.</a></li>
+          </ul>
+          <p>* denotes joint first authorship</p>
+        </div>
+      </div>
+
+      <div class="turnbuckle" id="col-4">
+        <div class="column justify-between">
+          <!-- Biography -->
+          <div>
+            <h1 class="sinking-margin">Biography</h1> <!-- this text sinks down in its column when the device is wide enough -->
+            <p>I research language and category learning.</p>
+          </div>
+
+          <!-- Credits -->
+          <p class="credits"><a href="https://sprig.site">Site by Rosemary ✿</a></p>
+        </div>
       </div>
 
     </main>
