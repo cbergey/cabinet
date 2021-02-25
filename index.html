@@ -18,7 +18,7 @@
 
       ~~~
 
-      Coded by Rosemary ✿
+      Marked up by Rosemary ✿
 -->
 
 <html lang="en" dir="ltr">
@@ -29,31 +29,48 @@
     <title>Claire Bergey</title>
   </head>
   <body>
-    <main class="columns-container">
-      <div class="column" id="col-3">
-        <h1>Claire Bergey</h1>
-        <p>Doctoral Candidate in Cognition</p>
-        <p>University of California</p>
-        <div class="bottom">
-          <img src="https://avatars.githubusercontent.com/u/16124068?s=460&u=e1be13ea83a9d3d121bcbf017694890b213cd9d1&v=4" alt="claire in a parking lot holding a large serving spoon" width="200" class="pb">
+    <main class="columns-container"> <!-- here is where the site begins.
+                                          this container is responsive to the device width,
+                                          and contains four columns. -->
+
+      <div class="column justify-between" id="col-3">
+        <!-- Name -->
+        <div> <!-- this div groups the lines of your title together in the eyes of the parent flex box -->
+          <h1>Claire Bergey</h1>
+          <p>Doctoral Candidate in Cognition</p>
+          <p>University of Chicago</p>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <img src="https://avatars.githubusercontent.com/u/16124068?s=460&u=e1be13ea83a9d3d121bcbf017694890b213cd9d1&v=4" alt="claire in a parking lot holding a large serving spoon" width="200">
         </div>
       </div>
-      <div class="column" id="col-2">
-        <div class="bottom">
-          <p><a href="mailto:cab3@williams.edu">cab3@williams.edu</a></p>
-        </div>
+
+      <!-- Links -->
+      <div class="column justify-end" id="col-2">
+        <ul class="list_flush">
+          <li><a href="mailto:cbergey@uchicago.edu">cbergey@uchicago.edu</a></li>
+          <li><a href="https://github.com/cbergey">Github</a></li>
+        </ul>
       </div>
+
+      <!-- Biography -->
       <div class="column" id="col-4">
         <h1 class="mt">Biography</h1>
         <p>i think clairebergey.net is my aspiration… unless you think therre’s a better option… i mean obviously the other option was clairebergey.help.</p>
       </div>
-      <div class="column v-center" id="col-1">
-        <h1>Publications</h1>
-        <ol>
-          <li>The Maids</li>
+
+      <!-- Research -->
+      <div class="column justify-center" id="col-1">
+        <h1>Conference Proceedings</h1>
+        <ul class="list_indent">
+          <li>Bergey, C.*, Morris, B.* & Yurovsky, D. (2020, July). <cite>Children hear more about what is atypical than what is typical.</cite> Proceedings paper presented as a talk at the 42nd annual meeting of the Cognitive Science Society. Virtual due to COVID19.</li>
           <li>Do Not Move Stones</li>
-        </ol>
+        </ul>
+        <p>* denotes joint first authors</p>
       </div>
+
     </main>
   </body>
 </html>
