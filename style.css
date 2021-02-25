@@ -7,6 +7,7 @@ body{
   font-size: .7em;
   font-family: Monaco, Consolas, monospace;
   color: #444;
+  hyphens: auto;
 }
 a{
   text-decoration: none;
@@ -31,6 +32,7 @@ h1{
   font-weight: 400;
   text-transform: uppercase;
 }
+cite{font-style: italic;}
 .columns-container{
   padding: 2em 1em;
   box-sizing: border-box;
@@ -82,7 +84,7 @@ img{
     border-right: 1px solid black;
     margin: 0;
   }
-  .mt{
+  .sinking-margin{
     margin-top: 8em;
   }
   img{margin: 4em 0;}
