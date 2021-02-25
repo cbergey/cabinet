@@ -43,6 +43,7 @@ cite{font-style: italic;}
   margin-bottom: 1em;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .justify-end{
   justify-content: flex-end;
