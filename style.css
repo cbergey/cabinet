@@ -94,7 +94,6 @@ img{
     padding: 1em 0;
     box-sizing: border-box;
     transition: background-color 2s;
-    overflow-y: scroll;
   }
   .turnbuckle:hover{
     background-color: #dce6d7;
@@ -104,6 +103,8 @@ img{
     width: 100%;
     border-right: 1px solid black;
     margin: 0;
+    overflow-y: auto;
+    box-sizing: border-box;
   }
   .sinking-margin{
     margin-top: 8em;
