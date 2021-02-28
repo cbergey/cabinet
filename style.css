@@ -6,13 +6,13 @@ body{
   background-color: #f1f7ee;
   font-size: .7em;
   font-family: Monaco, Consolas, monospace;
-  color: #444;
+  color: #454;
   hyphens: auto;
   cursor: help;
 }
 a{
   text-decoration: none;
-  color: #444;
+  color: #585;
 }
 p{
   margin: 0;
@@ -78,6 +78,30 @@ img{
   margin: 2em 0 1em 0;
   /*mix-blend-mode: luminosity;*/
 }
+.call-now{
+  margin: 0;
+  width: 60%;
+  height: auto;
+  align-self: center;
+  opacity: 0;
+  transition: opacity ease-out 2s;
+}
+.call-now:nth-of-type(2){
+  transition-delay: 500ms;
+}
+.call-now:nth-of-type(3){
+  transition-delay: 1000ms;
+}
+.call-now:nth-of-type(4){
+  transition-delay: 1500ms;
+}
+.notice{
+  margin: 1em 0;
+  background-color: #787;
+  color: #eee;
+  padding: 1em;
+  transition: background-color 3s;
+}
 
 /* Begin desktop layout changes (when device width >= 40em) */
 
@@ -90,7 +114,7 @@ img{
   }
   .turnbuckle{
     width: 25%;
-    border-right: 1px solid #444;
+    border-right: 1px solid #454;
     height: calc(100vh - 2em);
     position: relative;
     top: 1em;
@@ -104,11 +128,18 @@ img{
     height: 100vh;
     position: relative;
     top: -1em;
-    transition: background-color 2s;
+    transition: background-color 3s;
   }
   .column:hover{
-    background-color: #dce6d7;
-    transition: background-color 2s;
+    background-color: #e1ecdb;
+  }
+  .column:hover .notice{
+    background-color: #898;
+  }
+  .column:hover .call-now{
+    opacity: 1;
+    transition-timing-function: ease-in;
+    transition-duration: 4s;
   }
   .sinking-margin{
     margin-top: 8em;
@@ -116,3 +147,31 @@ img{
   img{margin: 4em 0;}
   .credits{text-align: right;}
 }
+
+
+/* Night Mode */
+
+/*
+body{
+  background-color: #372227;
+  color: #eff4ef;
+}
+.column:hover{
+  background-color: #481e28;
+}
+.turnbuckle{
+  border-color: #eff4ef;
+}
+.notice{
+  background-color: #463a3a;
+}
+.column:hover .notice{
+  background-color: #4d403c;
+}
+a{
+  color: #f0e2d8;
+}
+img{
+  mix-blend-mode: lighten;
+}
+*/
