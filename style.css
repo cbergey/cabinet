@@ -55,6 +55,9 @@ cite{font-style: italic;}
 .justify-center{
   justify-content: center;
 }
+.mb-1{
+  margin-bottom: 1em;
+}
 .credits{
   margin-top: 2em;
 }
