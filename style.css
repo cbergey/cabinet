@@ -8,10 +8,10 @@ body{
   font-family: Monaco, Consolas, monospace;
   color: #444;
   hyphens: auto;
-  cursor: help;
+  cursor: crosshair;
 }
 a{
-  text-decoration: none;
+  text-decoration: underline;
   color: #444;
 }
 p{
