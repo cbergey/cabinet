@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 html{
   font-size: 100%;
 }
@@ -7,8 +14,16 @@ body{
   font-size: .7em;
   font-family: Monaco, Consolas, monospace;
   color: #444;
-  hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   cursor: crosshair;
+}
+::-moz-selection{
+  background-color: #b4caab;
+}
+::selection{
+  background-color: #b4caab;
 }
 a{
   text-decoration: underline;
@@ -35,25 +50,38 @@ h1{
 }
 cite{font-style: italic;}
 .columns-container{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2em 1em;
   max-width: 100%;
 }
 .column{
   padding: 0 1em;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .justify-end{
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .justify-between{
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .justify-center{
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .mb-1{
   margin-bottom: 1em;
@@ -62,16 +90,24 @@ cite{font-style: italic;}
   margin-top: 2em;
 }
 #col-1{
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 #col-2{
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 #col-3{
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 #col-4{
-  order: 4;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   border-right: none;
 }
 img{
@@ -86,6 +122,8 @@ img{
 
 @media (min-width: 40rem) {
   .columns-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100vh;
     padding: 0;
@@ -103,14 +141,19 @@ img{
     width: 100%;
     margin: 0;
     overflow-y: auto;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 100vh;
     position: relative;
     top: -1em;
+    -webkit-transition: background-color 2s;
+    -o-transition: background-color 2s;
     transition: background-color 2s;
   }
   .column:hover{
     background-color: #dce6d7;
+    -webkit-transition: background-color 2s;
+    -o-transition: background-color 2s;
     transition: background-color 2s;
   }
   .sinking-margin{
