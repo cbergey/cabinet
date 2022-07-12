@@ -10,24 +10,30 @@ html{
 }
 body{
   margin: 0;
-  background-color: #f1f7ee;
+  background: #f1f7ee;
+  border-color: #444;
+  color: #444;
   font-size: .7em;
   font-family: Monaco, Consolas, monospace;
-  color: #444;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   cursor: crosshair;
+  animation: sunset 60s 1 forwards;
 }
-::-moz-selection{
-  background-color: #b4caab;
+@keyframes sunset {
+  0% {background: #f1f7ee; color: #444}
+  20% {color: #444; border-color: #444}
+  40% {color: #000; border-color: #000}
+  45% {color:  #ccc; border-color: #ccc}
+  100% {background: #623012; color: #ccc}
 }
-::selection{
-  background-color: #b4caab;
+::-moz-selection, ::selection{
+  background-color: #86977570;
 }
 a{
   text-decoration: underline;
-  color: #444;
+  color: inherit;
 }
 p{
   margin: 0;
@@ -131,10 +137,11 @@ img{
   }
   .turnbuckle{
     width: 25%;
-    border-right: 1px solid #444;
+    border-right: 1px solid currentcolor;
     height: calc(100vh - 2em);
     position: relative;
     top: 1em;
+    background-color: inherit;
   }
   .column{
     padding: 1em 1em;
@@ -146,15 +153,28 @@ img{
     height: 100vh;
     position: relative;
     top: -1em;
-    -webkit-transition: background-color 2s;
-    -o-transition: background-color 2s;
-    transition: background-color 2s;
   }
-  .column:hover{
+  .column::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: #dce6d7;
-    -webkit-transition: background-color 2s;
-    -o-transition: background-color 2s;
-    transition: background-color 2s;
+    animation: sunsetHover 60s 1 forwards;
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    z-index: -1;
+  }
+  @keyframes sunsetHover {
+    from {background-color: #dce6d7;}
+    to {background-color: #6f3512;}
+  }
+  .column:hover::after{
+    opacity: 1;
   }
   .sinking-margin{
     margin-top: 8em;
