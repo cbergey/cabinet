@@ -18,13 +18,12 @@ body{
   background-color: #f1f7ee;
   border-color: #444;
   color: #444;
-  animation: sunset 60s 1 forwards;
 }
 @keyframes sunset {
   0% {background-color: #f1f7ee; color: #444;}
   20% {color: #444; border-color: #444;}
   40% {color: #000; border-color: #000;}
-  45% {color:  #ccc; border-color: #ccc;}
+  42% {color:  #ccc; border-color: #ccc;}
   100% {background-color: #623012; color: #ccc;}
 }
 ::-moz-selection, ::selection{
@@ -161,7 +160,6 @@ img{
     width: 100%;
     height: 100%;
     background-color: #dce6d7;
-    animation: sunsetHover 60s 1 forwards;
     opacity: 0;
     -webkit-transition: opacity 2s;
     -o-transition: opacity 2s;
