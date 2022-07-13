@@ -35,11 +35,12 @@ const sunrise = () => {
     const timeToSunrise = (times.sunrise - now);
     const sunriseDuration = (times.sunriseEnd - times.sunrise);
     setStyles(-1, 0);
-    window.setTimeout(
-      () => setStyles(-1, 1, sunriseDuration),
-      timeToSunrise
-    );
-    // break?
+    if (timeToSunrise < 60 * 60 * 1000){
+      window.setTimeout(
+        () => setStyles(-1, 1, sunriseDuration),
+        timeToSunrise
+      );
+    }
   }
   else if (now < times.sunriseEnd) {
     console.log('sunrise in progress');
@@ -53,10 +54,12 @@ const sunrise = () => {
     const sunsetDuration = (times.sunset - times.sunsetStart);
     console.log('timeToSunset', timeToSunset, 'sunsetDuration', sunsetDuration)
     setStyles(1, 0);
-    window.setTimeout(
-      () => setStyles(1, 1, sunsetDuration),
-      timeToSunset
-    );
+    if (timeToSunset < 60 * 60 * 1000){
+      window.setTimeout(
+        () => setStyles(1, 1, sunsetDuration),
+        timeToSunset
+      );
+    }
   }
   else if (now < times.sunset) {
     console.log('sunset in progress');

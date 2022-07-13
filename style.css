@@ -22,12 +22,12 @@ body{
 @keyframes sunset {
   0% {background-color: #f1f7ee; color: #444;}
   20% {color: #444; border-color: #444;}
-  40% {color: #000; border-color: #000;}
-  42% {color:  #ccc; border-color: #ccc;}
+  30% {color: #000; border-color: #000;}
+  32% {color:  #ccc; border-color: #ccc;}
   100% {background-color: #1f3328; color: #ccc;}
 }
 ::-moz-selection, ::selection{
-  background-color: #86977570;
+  background-color: #79977570;
 }
 a{
   text-decoration: underline;
@@ -168,7 +168,7 @@ img{
   }
   @keyframes sunsetHover {
     from {background-color: #dce6d7;}
-    to {background-color: #0e1712;}
+    to {background-color: #283e31;}
   }
   .column:hover::after{
     opacity: 1;
